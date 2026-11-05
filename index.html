@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tính lợi nhuận và giá bán Shopee cho điện thoại và phụ kiện điện thoại theo biểu phí mới nhất.">
+  <title>Tính giá Shopee — Điện thoại & Phụ kiện</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Về đầu trang">
+      <span class="brand-mark">S</span>
+      <span>Sổ lời Shopee</span>
+    </a>
+    <div class="status"><span></span> Biểu phí cập nhật 05/11/2026</div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CÔNG CỤ ĐỊNH GIÁ</p>
+        <h1>Biết lời thật<br>trước khi lên giá.</h1>
+        <p class="hero-copy">Hai bảng tính riêng cho điện thoại và phụ kiện. Nhập chi phí, voucher, quảng cáo — hệ thống bóc tách từng khoản phí sàn và lợi nhuận ngay lập tức.</p>
+      </div>
+      <div class="hero-stats" aria-label="Tóm tắt biểu phí">
+        <div><strong>6%</strong><span>Phí xử lý giao dịch</span></div>
+        <div><strong>3.000đ</strong><span>Phí hạ tầng / đơn</span></div>
+        <div><strong>2–15%</strong><span>Phí cố định shop thường</span></div>
+      </div>
+    </section>
+
+    <section class="controls-bar">
+      <div>
+        <label for="shopType">Loại gian hàng</label>
+        <select id="shopType">
+          <option value="normal">Shop thường (không thuộc Mall)</option>
+          <option value="mall">Shopee Mall</option>
+        </select>
+      </div>
+      <button id="resetAll" class="ghost-button" type="button">Đặt lại dữ liệu</button>
+    </section>
+
+    <section class="calculator-grid" aria-label="Hai bảng tính giá">
+      <article class="calculator" data-kind="phone">
+        <div class="calculator-heading">
+          <div class="icon-box phone-icon" aria-hidden="true">▯</div>
+          <div><p>BẢNG 01</p><h2>Điện thoại</h2></div>
+          <span class="fee-chip"><b data-role="category-rate-label">2%</b> phí cố định</span>
+        </div>
+        <div class="input-grid"></div>
+        <details>
+          <summary>Tuỳ chỉnh phí & chi phí nâng cao <span>+</span></summary>
+          <div class="advanced-grid"></div>
+        </details>
+        <div class="result-panel"></div>
+      </article>
+
+      <article class="calculator" data-kind="accessory">
+        <div class="calculator-heading">
+          <div class="icon-box accessory-icon" aria-hidden="true">⌁</div>
+          <div><p>BẢNG 02</p><h2>Phụ kiện điện thoại</h2></div>
+          <span class="fee-chip"><b data-role="category-rate-label">15%</b> phí cố định</span>
+        </div>
+        <div class="category-field">
+          <label for="accessoryCategory">Nhóm phụ kiện</label>
+          <select id="accessoryCategory">
+            <option value="common">Cáp, sạc, ốp lưng, pin, kính, phụ kiện khác</option>
+            <option value="memory">Thẻ nhớ / thiết bị trình chiếu</option>
+            <option value="watch">Phụ kiện cho đồng hồ thông minh</option>
+          </select>
+        </div>
+        <div class="input-grid"></div>
+        <details>
+          <summary>Tuỳ chỉnh phí & chi phí nâng cao <span>+</span></summary>
+          <div class="advanced-grid"></div>
+        </details>
+        <div class="result-panel"></div>
+      </article>
+    </section>
+
+    <section class="formula-section">
+      <div>
+        <p class="eyebrow">CÔNG THỨC ĐANG DÙNG</p>
+        <h2>Minh bạch đến từng đồng.</h2>
+      </div>
+      <div class="formula-card">
+        <code>Lợi nhuận = Doanh thu sau voucher − Giá nhập − Quảng cáo − Chi phí khác − Tổng phí Shopee</code>
+        <p>Phí cố định tính trên giá sản phẩm trừ voucher của shop. Phí xử lý 6% còn tính thêm phần phí vận chuyển người mua trả và trừ khuyến mãi ngân hàng, đúng theo công thức Shopee công bố.</p>
+      </div>
+    </section>
+
+    <section class="sources">
+      <div>
+        <p class="eyebrow">NGUỒN & LƯU Ý</p>
+        <h2>Phí có thể thay đổi.</h2>
+      </div>
+      <div class="source-list">
+        <a href="https://help.shopee.vn/portal/4/article/77243" target="_blank" rel="noreferrer">Điều khoản dịch vụ Shopee — công thức phí xử lý và phí cố định <span>↗</span></a>
+        <a href="https://mms.file.susercontent.com/api/v4/11195002/mms/vn-11195002-bmlg5-mo82qh7ujsau29" target="_blank" rel="noreferrer">Biểu phí cố định shop thường từ 23/05/2026 <span>↗</span></a>
+        <a href="https://mms.file.susercontent.com/api/v4/11195002/mms/vn-11195002-bmlg9-mo7yb9mp42rkab" target="_blank" rel="noreferrer">Biểu phí cố định Shopee Mall từ 29/05/2026 <span>↗</span></a>
+        <p>Công cụ dùng để ước tính. Các gói dịch vụ tự chọn, thuế khấu trừ và điều chỉnh riêng của shop cần nhập thêm ở mục nâng cao.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Sổ lời Shopee</span><span>Dữ liệu được lưu riêng trên trình duyệt của bạn.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
